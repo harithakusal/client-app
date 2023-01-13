@@ -12,9 +12,7 @@ function App() {
         setBackendData(data)
       }
     )
-  }, [])
-  
-  
+  }, []);
   
   return (
 
