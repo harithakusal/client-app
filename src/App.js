@@ -5,7 +5,7 @@ function App() {
   const[backendData, setBackendData] = useState([{}])
   
   useEffect(() => {
-    fetch("/api").then(
+    fetch("https://node-app.adaptable.app/api").then(
       response => response.json()
     ).then(
       data => {
