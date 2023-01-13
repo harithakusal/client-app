@@ -5,7 +5,7 @@ function App() {
   const[backendData, setBackendData] = useState([{}])
   
   useEffect(() => {
-    fetch("/api").then(
+    fetch("http://node-app.adaptable.app/api").then(
       response => response.json()
     ).then(
       data => {
@@ -16,17 +16,19 @@ function App() {
   
   return (
 
-    <div>
+  <div>
     
-      {(typeof backendData.users === 'undefined') ? (
-        <p>Loading...</p>
-      ) : (
-        backendData.users.map((user, i) => (
-          <p key={i} >{user}</p>
-        ))
-      )}
+  {(typeof backendData.users === 'undefined') ? (
+    <p>Loading...</p>
+  ) : (
+    backendData.users.map((user, i) => (
+      <p key={i} >{user}</p>
+    ))
+  )}
+
+</div>
+
     
-    </div>
      
   )
 }
