@@ -9,18 +9,18 @@ function App() {
     // fetch("https://node-app.adaptable.app/api").then(
     //   response => response.json()
     // ).then(
-    //   data => { 
+    //   data => {
     //     console.log(data)
     //     setBackendData(data)
     //   }
     // )
-    const headers = {
-      'Content-Type': 'application/json',
-      "Access-Control-Allow-Origin": "*"
+
+  const headers = {
+    'Content-Type': 'application/json',
+    "Access-Control-Allow-Origin": "*"
   };
-    axios.get("https://node-app.adaptable.app/api", {header:headers}).then(data => {
-      setBackendData(data.data)
-    })
+
+  axios.get("https://node-app.adaptable.app/api", {header:headers}).then(data => {setBackendData(data.data)})
 
   }, [])
   
